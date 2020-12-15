@@ -1,0 +1,43 @@
+                                        /*বিসমিল্লাহির_রহমানির_রহীম*/
+   /********************************************************************************************\
+   ||                 IN THE NAME OF ALLAH, MOST GRACIOUS AND MOST MERCIFUL                    ||
+   ||                                                                                          ||
+   ||    Author     : Md.Sohan Mia                                                             ||
+   ||    Email      : sohancms@gmail.com                                                       ||
+   ||    University : Bangamata Sheikh Fojilatunnesa Mujib Science and Technology University   ||
+   ||                                                                                          ||
+   ||                 Department of Computer Science & Engineering                             ||
+   ||                                                                                          ||
+   \********************************************************************************************/
+
+///*****************************************************************************************
+///***************START************************START************************START***********
+///*****************************************************************************************
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,ai;
+    double sum=0,result=0;
+    cin >> n;
+    for(int i=0; i<n; i++)
+    {
+        cin >> ai;
+        sum=sum+ai;
+    }
+    result =sum/n;
+    if(sum=0)
+    {
+        cout << 0 << endl;
+    }
+    else
+    {
+        cout << result << endl;
+    }
+
+
+}
+//**************************Alhamdulillah**************************//
+//**************************Alhamdulillah**************************//
