@@ -31,7 +31,7 @@ int main()
     cin >> h >> m >> s;
 
 start:
-    for (h; h < 12; h++)
+    for (h; h < 24; h++)
     {
         for (m; m < 60; m++)
         {
