@@ -54,3 +54,22 @@ p = 6
 q = 3
 p <<= q
 print(p)
+
+# Relational or comparison operators
+# (equal(==),not equal(!=),greater than(>),less than(<),greater than or equal to(>=),less thab or equal to(<=))
+a, b = 10, 3
+print(a < b)
+
+# logical operators (or,and,not)
+s, t = 10, 3
+c = s > 3 or t < 2
+print(c)
+# unary operator()
+r = 10
+i = 1
+q = 5
+print(q)
+q = -q
+print(q)
+q = -q
+print(q)

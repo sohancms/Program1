@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <fstream>
 #include <conio.h>
+#include <windows.h>
 using namespace std;
 
 char mainMenu();
