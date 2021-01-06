@@ -24,12 +24,36 @@ typedef double dd;
 
 void solve()
 {
+    ll t, w, h, n;
+    cin >> t;
+    for (int i = 0; i < t; i++)
+    {
+        cin >> w >> h >> n;
+        if ((w % 2 == 0) || (h % 2 == 0))
+        {
+            if ((w * h) >= n)
+            {
+                cout << "YES" << endl;
+            }
+        }
+        else if ((w % 2 != 0) || (h % 2 != 0))
+        {
+            if (n == 1)
+            {
+                cout << "YES" << endl;
+            }
+            else
+            {
+                cout << "NO" << endl;
+            }
+        }
+    }
 }
 
 int main()
 {
-   solve();
-   return 0;
+    solve();
+    return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//

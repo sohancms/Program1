@@ -24,12 +24,21 @@ typedef double dd;
 
 void solve()
 {
+    ll t, n, gram;
+    cin >> t;
+    for (int i = 0; i < t; i++)
+    {
+        cin >> n;
+        while (n--)
+        {
+        }
+    }
 }
 
 int main()
 {
-   solve();
-   return 0;
+    solve();
+    return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//

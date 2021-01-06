@@ -1,5 +1,5 @@
-                                         /*বিসমিল্লাহির_রহমানির_রহীম*/
-   /********************************************************************************************\
+/*বিসমিল্লাহির_রহমানির_রহীম*/
+/********************************************************************************************\
    ||                 IN THE NAME OF ALLAH, MOST GRACIOUS AND MOST MERCIFUL                    ||
    ||                                                                                          ||
    ||    Author     : Md.Sohan Mia                                                             ||
@@ -19,28 +19,28 @@
 using namespace std;
 int main()
 {
-    set<char>word;
-    int n ;
-    cin>>n;
+    set<char> word;
+    int n;
+    cin >> n;
     string s;
-    cin>>s;
-    for(int i =0 ; i<n;i++)
+    cin >> s;
+    for (int i = 0; i < n; i++)
     {
-          if(s[i] >='A' && s[i] <= 'Z')
-          {
-              s[i] += 32;              
-          }
-          word.insert(s[i]);
+        if (s[i] >= 'A' && s[i] <= 'Z')
+        {
+            s[i] += 32;
+        }
+        word.insert(s[i]);
     }
-    if (word.size() == 26 )
+    if (word.size() == 26)
     {
-        cout<<"YES";
+        cout << "YES";
     }
     else
     {
-      cout<<"NO";
+        cout << "NO";
     }
-return 0;
+    return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//

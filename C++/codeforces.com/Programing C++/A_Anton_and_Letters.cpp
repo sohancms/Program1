@@ -24,12 +24,23 @@ typedef double dd;
 
 void solve()
 {
+    set<char> s;
+    string str;
+    getline(cin, str);
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (str[i] >= 'a' && str[i] <= 'z')
+        {
+            s.insert(str[i]);
+        }
+    }
+    cout << s.size();
 }
 
 int main()
 {
-   solve();
-   return 0;
+    solve();
+    return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//
