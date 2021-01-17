@@ -15,6 +15,8 @@
 ///*****************************************************************************************
 #include <bits/stdc++.h>
 #include <iomanip>
+#include <algorithm>
+#include <climits>
 #define PI acos(-1.0)
 using namespace std;
 
@@ -24,30 +26,47 @@ typedef double dd;
 
 void solve()
 {
-    ll t, n;
+    ll t;
     cin >> t;
-    for (int i = 0; i < t; i++)
+    while (t--)
     {
-        ll w, h, p = 1;
-        cin >> w >> h >> n;
-        while (w % 2 == 0)
+        ll n, k;
+        cin >> n >> k;
+        int *arr;
+        int *brr;
+        arr = new int[n];
+        brr = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            w = w / 2;
-            p = p * 2;
+            cin >> arr[i];
         }
-        while (h % 2 == 0)
+        for (int i = 0; i < n; i++)
         {
-            h = h / 2;
-            p = p * 2;
+            cin >> brr[i];
         }
-        if (p >= n)
+        sort(arr, arr + n);
+        sort(brr, brr + n);
+        int i = 0, j = (n - 1);
+        while (k > 0 && i <= n && j >= 0)
         {
-            cout << "YES" << endl;
+            if (arr[i] < brr[j])
+            {
+                swap(arr[i], brr[j]);
+                i++;
+                k--;
+                j--;
+            }
+            else
+            {
+                break;
+            }
         }
-        else
+        int sum = 0;
+        for (int l = 0; l < n; l++)
         {
-            cout << "NO" << endl;
+            sum = sum + arr[l];
         }
+        cout << sum << endl;
     }
 }
 

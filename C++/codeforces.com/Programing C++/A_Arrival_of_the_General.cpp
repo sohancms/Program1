@@ -15,6 +15,8 @@
 ///*****************************************************************************************
 #include <bits/stdc++.h>
 #include <iomanip>
+#include <algorithm>
+#include <climits>
 #define PI acos(-1.0)
 using namespace std;
 
@@ -24,31 +26,6 @@ typedef double dd;
 
 void solve()
 {
-    ll t, n;
-    cin >> t;
-    for (int i = 0; i < t; i++)
-    {
-        ll w, h, p = 1;
-        cin >> w >> h >> n;
-        while (w % 2 == 0)
-        {
-            w = w / 2;
-            p = p * 2;
-        }
-        while (h % 2 == 0)
-        {
-            h = h / 2;
-            p = p * 2;
-        }
-        if (p >= n)
-        {
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
-    }
 }
 
 int main()
