@@ -26,45 +26,26 @@ typedef double dd;
 
 void solve()
 {
-    ll n, a = 0, b = 0, x = 0, y = 101;
-    cin >> n;
-    ll arr[n];
-    for (int i = 0; i < n; i++)
+    ll t;
+    cin >> t;
+    for (int i = 0; i < t; i++)
     {
-        cin >> arr[i];
-    }
-
-    for (int j = 0; j < n; j++)
-    {
-        x = max(x, arr[j]);
-        y = min(y, arr[j]);
-    }
-
-    for (int k = 0; k < n; k++)
-    {
-        if (arr[k] == x)
+        int n, d;
+        cin >> n >> d;
+        int arr[n];
+        for (int j = 0; j < n; j++)
         {
-            a = k;
-            break;
+            cin >> arr[j];
         }
-    }
-
-    for (int l = 0; l < n; l++)
-    {
-        if (arr[l] == y)
+        sort(arr, arr + n);
+        if (arr[0] + arr[1] <= d || arr[n - 1] <= d)
         {
-            b = l;
+            cout << "YES" << endl;
         }
-    }
-
-    if (a > b)
-    {
-        cout << a + n - b - 2;
-    }
-
-    else
-    {
-        cout << a + n - b - 1;
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
 }
 
