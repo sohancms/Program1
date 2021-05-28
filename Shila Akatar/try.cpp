@@ -1,50 +1,33 @@
-#include <iostream>
-#include <stdlib.h>
-using namespace std;
-typedef struct stuck
-{
-    int size;
-    int top;
-    int *arr;
-} stack;
+// Program to compute absolute value
+// Works for both int and float
 
-int isEmpty(stack *ptr)
+#include <iostream> 
+using namespace std;
+
+// function with float type parameter
+float absolute(float var)
 {
-    cout << "isEmpty function is calling" << endl;
-    if (ptr->top == -1)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    if (var < 0.0)
+        var = -var;
+    return var;
 }
-int isFull(stack *ptr)
+
+// function with int type parameter
+int absolute(int var)
 {
-    if (ptr->top == (ptr->size - 1))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    if (var < 0)
+
+        var = -var;
+    return var;
 }
+
 int main()
 {
-    stack *s; //= (stack *)malloc(sizeof(stack));
-    s->size = 80;
-    s->top = -1;
-    stack *s = new int[s->size];
-    if (isEmpty(s))
-    {
-        cout << "The stack is empty." << endl;
-    }
-    else
-    {
-        cout << "The stack is not empty." << endl;
-    }
 
+    // call function with int type parameter
+    cout << "Absolute value of -5 = " << absolute(-5) << endl;
+
+    // call function with float type parameter
+    cout << "Absolute value of 5.5 = " << absolute(5.5f) << endl;
     return 0;
 }

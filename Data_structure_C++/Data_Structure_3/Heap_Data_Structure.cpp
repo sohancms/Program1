@@ -3,6 +3,13 @@
 #include <vector>
 using namespace std;
 
+void swap(int *a, int *b)
+{
+    int temp = *b;
+    *b = *a;
+    *a = temp;
+}
+
 void heapify(vector<int> &ht, int i)
 {
     int size = ht.size();
@@ -23,7 +30,7 @@ void heapify(vector<int> &ht, int i)
         heapify(ht, largest);
     }
 }
-void insert(vector<int> &hT, int newnumber)
+void insert(vector<int> &ht, int newnumber)
 {
     int size = ht.size();
     if (size == 0)
@@ -40,6 +47,34 @@ void insert(vector<int> &hT, int newnumber)
     }
 }
 
+void deleteNode(vector<int> &ht, int num)
+{
+    int size = ht.size();
+    int i;
+    for (i = 0; i < size; i++)
+    {
+        if (num == ht[i])
+        {
+            break;
+        }
+    }
+    swap(&ht[i], &ht[size - 1]);
+    ht.pop_back();
+    for (int i = 0; i < size / 2 - 1; i--)
+    {
+        heapify(ht, i);
+    }
+}
+
+void printArray(vector<int> &ht)
+{
+    for (int i = 0; i < ht.size(); ++i)
+    {
+        cout << ht[i] << " ";
+    }
+    cout << "\n";
+}
+
 int main()
 {
     vector<int> heaptree;
@@ -48,4 +83,15 @@ int main()
     insert(heaptree, 5);
     insert(heaptree, 5);
     insert(heaptree, 2);
+    cout << "Max-heat array: ";
+
+    printArray(heaptree);
+
+    deleteNode(heaptree, 4);
+
+    cout << "After deleting element: ";
+
+    printArray(heaptree);
+
+    return 0;
 }
