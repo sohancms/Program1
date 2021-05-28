@@ -2,6 +2,27 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+void heapify(vector<int> &ht, int i)
+{
+    int size = ht.size();
+    int largest = i;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+    if (l < size && ht[l] > ht[largest])
+    {
+        largest = l;
+    }
+    if (r < size && ht[r] > ht[largest])
+    {
+        largest = r;
+    }
+    if (largest != i)
+    {
+        swap(&ht[i], &ht[largest]);
+        heapify(ht, largest);
+    }
+}
 void insert(vector<int> &hT, int newnumber)
 {
     int size = ht.size();
