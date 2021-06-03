@@ -43,30 +43,22 @@ typedef long double ld;
 typedef double db;
 typedef string str;
 
-ll s, t;
-str p, q, r, o;
-
-int input()
-{
-
-    cin >> p >> q >> r;
-    o = p + q;
-    sort(o);
-    sort(r);
-    s = p.size() + q.size();
-    t = r.size();
-}
-
 void solve()
 {
-    input();
-    if ((s == t) & (o == r))
+    ll t, n;
+    cin >> t;
+    while (t--)
     {
-        cout << "YES" << endl;
-    }
-    else
-    {
-        cout << "NO" << endl;
+        cin >> n;
+        ll ans = 1;
+        for (ll i = 1; i <= n; i++)
+        {
+            if (2 * i <= n)
+            {
+                ans = max(ans, i);
+            }
+        }
+        cout << ans << endl;
     }
 }
 

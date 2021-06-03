@@ -15,29 +15,70 @@
 ///*****************************************************************************************
 #include <bits/stdc++.h>
 #include <iomanip>
+#include <algorithm>
+#include <climits>
+//====================================> define <====================================
 #define PI acos(-1.0)
+#define f first
+#define s second
+#define pb push_back
+#define pf push_front
+#define pob pop_back
+#define pof pop_front
+#define mp make_pair
+#define all(x) x.begin(), x.end()
+#define sort(x) sort(all(x))
+#define rsz resize
+#define ins insert
+#define ft front()
+#define bk back()
+#define eb emplace_back
+#define lb lower_bound
+#define ub upper_bound
+#define rtn return
+
 using namespace std;
 
+//====================================> typedef <====================================
 typedef long long ll;
 typedef long double ld;
-typedef double dd;
+typedef double db;
+typedef string str;
 
 void solve()
 {
-    ll t, n, gram;
-    cin >> t;
-    for (int i = 0; i < t; i++)
+    ll n, count1 = 0, count2 = 0, arr[10000];
+    cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        cin >> n;
-        while (n--)
+        cin >> arr[i];
+        if (arr[i] == 1)
         {
+            count1++;
         }
+        else
+        {
+            count2++;
+        }
+    }
+    if (count1 % 2 == 0 && count1 > 0 || count2 % 2 == 0 && count1 == 0)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
     }
 }
 
 int main()
 {
-    solve();
+    ll test;
+    cin >> test;
+    while (test--)
+    {
+        solve();
+    }
     return 0;
 }
 //**************************Alhamdulillah**************************//

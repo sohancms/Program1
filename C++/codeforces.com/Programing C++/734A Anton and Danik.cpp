@@ -9,37 +9,37 @@
 using namespace std;
 int main()
 {
-    int n,cnt=0,ans=0,i;
-    char a[111111];
-   cin >> n;
-    for(i=1;i<=n;i++)
-    {
-        cin>> a[i] ;
-    }
-    for(i=1;i<=n;i++)
-    {
-		if( a[i] == 'D')
-            {
-			cnt ++ ;
-            }
-		if( a[i] == 'A')
-            {
-			ans++ ;
-		    }
+	int n, cnt = 0, ans = 0, i;
+	char a[111111];
+	cin >> n;
+	for (i = 1; i <= n; i++)
+	{
+		cin >> a[i];
 	}
-	  if( ans > cnt )
-        {
-		cout << "Anton" ;
-        }
-	 if( ans < cnt )
-	   {
-		cout<< "Danik" ;
-	   }
-	 if( ans == cnt )
-	   {
-		cout<< "Friendship" ;
-	   }
-return 0;
+	for (i = 1; i <= n; i++)
+	{
+		if (a[i] == 'D')
+		{
+			cnt++;
+		}
+		if (a[i] == 'A')
+		{
+			ans++;
+		}
+	}
+	if (ans > cnt)
+	{
+		cout << "Anton";
+	}
+	if (ans < cnt)
+	{
+		cout << "Danik";
+	}
+	if (ans == cnt)
+	{
+		cout << "Friendship";
+	}
+	return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//

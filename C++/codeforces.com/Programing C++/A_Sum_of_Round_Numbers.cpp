@@ -23,6 +23,8 @@
 #define s second
 #define pb push_back
 #define pf push_front
+#define pob pop_back
+#define pof pop_front
 #define mp make_pair
 #define all(x) x.begin(), x.end()
 #define sort(x) sort(all(x))
@@ -43,37 +45,38 @@ typedef long double ld;
 typedef double db;
 typedef string str;
 
-ll s, t;
-str p, q, r, o;
-
-int input()
-{
-
-    cin >> p >> q >> r;
-    o = p + q;
-    sort(o);
-    sort(r);
-    s = p.size() + q.size();
-    t = r.size();
-}
-
 void solve()
 {
-    input();
-    if ((s == t) & (o == r))
+    ll t, n;
+    cin >> t;
+    for (ll i = 0; i < t; i++)
     {
-        cout << "YES" << endl;
-    }
-    else
-    {
-        cout << "NO" << endl;
+        cin >> n;
+        ll j = 1, r;
+        vector<int> v;
+        while (n)
+        {
+            r = n % 10;
+            if (r != 0)
+            {
+                v.pb(r * j);
+            }
+            n = n / 10;
+            j = j * 10;
+        }
+        cout << v.size() << endl;
+        for (auto it = v.begin(); it != v.end(); it++)
+        {
+            cout << *it << " ";
+        }
+        cout << endl;
     }
 }
 
 int main()
 {
     solve();
-    rtn 0;
+    return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//

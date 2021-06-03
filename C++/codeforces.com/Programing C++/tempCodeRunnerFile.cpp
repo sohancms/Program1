@@ -15,37 +15,60 @@
 ///*****************************************************************************************
 #include <bits/stdc++.h>
 #include <iomanip>
+#include <algorithm>
+#include <climits>
+//====================================> define <====================================
 #define PI acos(-1.0)
+#define f first
+#define s second
+#define pb push_back
+#define pf push_front
+#define pob pop_back
+#define pof pop_front
+#define mp make_pair
+#define all(x) x.begin(), x.end()
+#define sort(x) sort(all(x))
+#define rsz resize
+#define ins insert
+#define ft front()
+#define bk back()
+#define eb emplace_back
+#define lb lower_bound
+#define ub upper_bound
+#define rtn return
+
 using namespace std;
 
+//====================================> typedef <====================================
 typedef long long ll;
 typedef long double ld;
-typedef double dd;
+typedef double db;
+typedef string str;
 
 void solve()
 {
-    ll t, w, h, n;
+    ll t, n;
     cin >> t;
-    for (int i = 0; i < t; i++)
+    vector<int> v;
+    for (ll i = 0; i < t; i++)
     {
-        cin >> w >> h >> n;
-        if ((w % 2 == 0) || (h % 2 == 0))
+        cin >> n;
+        ll j = 1, r;
+        while (n)
         {
-            if ((w * h) >= n)
+            r = n % 10;
+            if (r > 0)
             {
-                cout << "YES" << endl;
+                r = r * j;
+                v.pb(r);
             }
+            n = n / 10;
+            j = j * 10;
         }
-        else if ((w % 2 != 0) || (h % 2 != 0))
+        cout << v.size() + 1 << endl;
+        for (ll i = v.size(); i >= 0; i--)
         {
-            if (n == 1)
-            {
-                cout << "YES" << endl;
-            }
-            else
-            {
-                cout << "NO" << endl;
-            }
+            cout << v[i] << " ";
         }
     }
 }
