@@ -49,16 +49,16 @@ void solve()
     cin >> t;
     while (t--)
     {
+        ll n;
         cin >> n;
-        ll ans = 1;
-        for (ll i = 1; i <= n; i++)
+        if (n % 2 == 0)
         {
-            if (2 * i <= n)
-            {
-                ans = max(ans, i);
-            }
+            cout << n / 2 << endl;
         }
-        cout << ans << endl;
+        else
+        {
+            cout << (n - 1) / 2 << endl;
+        }
     }
 }
 

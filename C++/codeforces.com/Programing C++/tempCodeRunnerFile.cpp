@@ -47,35 +47,32 @@ typedef string str;
 
 void solve()
 {
-    ll t, n;
-    cin >> t;
+    ll test;
     vector<int> v;
-    for (ll i = 0; i < t; i++)
+    for (int i = 0; i < 3; i++)
     {
-        cin >> n;
-        ll j = 1, r;
-        while (n)
-        {
-            r = n % 10;
-            if (r > 0)
-            {
-                r = r * j;
-                v.pb(r);
-            }
-            n = n / 10;
-            j = j * 10;
-        }
-        cout << v.size() + 1 << endl;
-        for (ll i = v.size(); i >= 0; i--)
-        {
-            cout << v[i] << " ";
-        }
+        cin >> v[i];
+    }
+    sort(v);
+    if (v[1] == v[2])
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
     }
 }
 
 int main()
 {
-    solve();
+
+    ll test;
+    cin >> test;
+    while (test--)
+    {
+        solve();
+    }
     return 0;
 }
 //**************************Alhamdulillah**************************//

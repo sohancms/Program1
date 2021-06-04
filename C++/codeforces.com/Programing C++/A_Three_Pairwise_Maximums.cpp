@@ -47,37 +47,28 @@ typedef string str;
 
 void solve()
 {
-    ll n;
-    cin >> n;
-    ll arr[n], odd = 0, even = 0;
-
-    for (int i = 0; i < n; i++)
+    ll a;
+    vector<int> v;
+    for (int i = 0; i < 3; i++)
     {
-        cin >> arr[i];
-        if (arr[i] % 2 != i % 2)
-        {
-            if (arr[i] % 2 == 0)
-            {
-                even++;
-            }
-            else
-            {
-                odd++;
-            }
-        }
+        cin >> a;
+        v.pb(a);
     }
-    if (even != odd)
+    sort(v);
+    if (v[1] == v[2])
     {
-        cout << "-1" << endl;
+        cout << "YES" << endl;
+        cout << v[0] << " " << v[0] << " " << v[1] << endl;
     }
     else
     {
-        cout << even << endl;
+        cout << "NO" << endl;
     }
 }
 
 int main()
 {
+
     ll test;
     cin >> test;
     while (test--)

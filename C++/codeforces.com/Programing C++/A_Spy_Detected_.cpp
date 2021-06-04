@@ -45,37 +45,37 @@ typedef long double ld;
 typedef double db;
 typedef string str;
 
-void solve()
+int solve()
 {
-    ll n;
+    ll n, count = 0;
     cin >> n;
-    ll arr[n], odd = 0, even = 0;
-
-    for (int i = 0; i < n; i++)
+    int arr[n];
+    for (int i = 1; i <= n; i++)
     {
         cin >> arr[i];
-        if (arr[i] % 2 != i % 2)
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        if (arr[i] != arr[i + 1])
         {
-            if (arr[i] % 2 == 0)
+            if (arr[i + 1] == arr[i + 2])
             {
-                even++;
+                cout << i << endl;
+                return i;
+            }
+            else if (arr[i] == arr[i + 2])
+            {
+                cout << i + 1 << endl;
+                return i;
             }
             else
             {
-                odd++;
+                cout << n << endl;
+                return n;
             }
         }
     }
-    if (even != odd)
-    {
-        cout << "-1" << endl;
-    }
-    else
-    {
-        cout << even << endl;
-    }
 }
-
 int main()
 {
     ll test;
