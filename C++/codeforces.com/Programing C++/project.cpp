@@ -15,12 +15,37 @@
 ///*****************************************************************************************
 #include <bits/stdc++.h>
 #include <iomanip>
+#include <algorithm>
+#include <climits>
+//====================================> define <====================================
 #define PI acos(-1.0)
+#define f first
+#define s second
+#define pb push_back
+#define pf push_front
+#define pob pop_back
+#define pof pop_front
+#define mp make_pair
+#define all(x) x.begin(), x.end()
+#define sort(x) sort(all(x))
+#define rsz resize
+#define ins insert
+#define ft front()
+#define bk back()
+#define eb emplace_back
+#define lb lower_bound
+#define ub upper_bound
+#define ima INT_MAX
+#define imi INT_MIN
+#define rtn return
+
 using namespace std;
 
+//====================================> typedef <====================================
 typedef long long ll;
 typedef long double ld;
-typedef double dd;
+typedef double db;
+typedef string str;
 
 void solve()
 {
@@ -28,7 +53,12 @@ void solve()
 
 int main()
 {
-   solve();
+   ll test;
+   cin >> test;
+   while (test--)
+   {
+      solve();
+   }
    return 0;
 }
 //**************************Alhamdulillah**************************//

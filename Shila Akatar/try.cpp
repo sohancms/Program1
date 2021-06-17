@@ -2,6 +2,7 @@
 // Works for both int and float
 
 #include <iostream> 
+#include <conio.h>
 using namespace std;
 
 // function with float type parameter

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 int main()
 {
 
@@ -10,6 +11,6 @@ int main()
     printf("The summation=%d\n", result);
     avr = (float)((result) / 3);
     printf("the avarage=%.2f", avr);
-
+    getch();
     return 0;
 }
