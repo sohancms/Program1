@@ -1,22 +1,16 @@
 #include <stdio.h>
-
-int main()
+ 
+int main(void)
 {
-    int w, i, b;
-
-    i = w % b;
-    printf("enter the weight");
-    scanf("%d", &w);
-    for (b = 2; b <= 10; b = b + 2)
+    int a ;
+    scanf("%d",&a);
+    if(a <= 2 || a%2 != 0)
     {
-        if (i == 0 && i & 2 == 0)
-        {
-            printf("YES");
-        }
-        else
-        {
-            printf("NO");
-        }
+        printf("NO\n");
+    }
+    else
+    {
+        printf("YES\n");
     }
     return 0;
 }

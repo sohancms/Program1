@@ -11,5 +11,8 @@ int main()
         k = k + i;
         i++;
     }
+    int x;
+    cin >> x;
+    cout << x;
     return 0;
 }

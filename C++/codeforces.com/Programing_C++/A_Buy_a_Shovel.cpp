@@ -49,17 +49,20 @@ typedef string str;
 
 void solve()
 {
+    ll k, r, x, count;
+    cin >> k >> r;
+    int i = 1;
+    while ((((i * k) % 10) != r) and (((i * k) % 10) != 0))
+    {
+        i++;
+    }
+    cout << i << endl;
 }
 
 int main()
 {
-   ll test;
-   cin >> test;
-   while (test--)
-   {
-      solve();
-   }
-   return 0;
+    solve();
+    return 0;
 }
 //**************************Alhamdulillah**************************//
 //**************************Alhamdulillah**************************//
