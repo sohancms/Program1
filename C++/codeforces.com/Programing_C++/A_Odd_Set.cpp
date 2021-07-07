@@ -17,7 +17,7 @@
 #include <iomanip>
 #include <algorithm>
 #include <climits>
-//====================================> define <====================================
+//====================================> define <=====================================
 #define PI acos(-1.0)
 #define f first
 #define s second
@@ -46,24 +46,31 @@ typedef long long ll;
 typedef long double ld;
 typedef double db;
 typedef string str;
+//=====================================> const <=====================================
+const ll mod = 1000000007;
 
 void solve()
 {
-    ll n, count = 0;
+    ll n, odd = 0, a;
     cin >> n;
-    ll x = n;
-    for (int i = 1; i <= n; i = (i * 10) + 1)
+    for (int i = 0; i < (2 * n); i++)
     {
-        for (int j = 1; j <= 9; j++)
+        cin >> a;
+        if (a % 2 != 0)
         {
-            if ((i * j) <= n)
-            {
-                count++;
-            }
+            odd++;
         }
     }
-    cout << count << endl;
+    if (odd == n)
+    {
+        cout << "Yes" << endl;
+    }
+    else
+    {
+        cout << "No" << endl;
+    }
 }
+
 int main()
 {
     ll test;

@@ -46,32 +46,27 @@ typedef long long ll;
 typedef long double ld;
 typedef double db;
 typedef string str;
+//====================================> const <====================================
+const ll mod = 1000000007;
 
 void solve()
 {
-    ll n, count = 0;
-    cin >> n;
-    ll x = n;
-    for (int i = 1; i <= n; i = (i * 10) + 1)
+    ll a = 97, m, ans = 0;
+    str p;
+    cin >> p;
+    m = abs(a - p[0]);
+    ans += min(m, 26 - m);
+    for (int i = 1; i < p.size(); i++)
     {
-        for (int j = 1; j <= 9; j++)
-        {
-            if ((i * j) <= n)
-            {
-                count++;
-            }
-        }
+        m = abs(p[i] - p[i - 1]);
+        ans += min(m, 26 - m);
     }
-    cout << count << endl;
+    cout << ans << endl;
 }
+
 int main()
 {
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    solve();
     return 0;
 }
 //**************************Alhamdulillah**************************//

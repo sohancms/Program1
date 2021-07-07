@@ -1,7 +1,7 @@
 // Program to compute absolute value
 // Works for both int and float
 
-#include <iostream> 
+#include <iostream>
 #include <conio.h>
 using namespace std;
 

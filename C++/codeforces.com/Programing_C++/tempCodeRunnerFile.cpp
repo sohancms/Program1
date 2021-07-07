@@ -1,18 +1,20 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
+
+int gcd(int a, int b)
+{
+   while (b)
+      b ^= a ^= b ^= a %= b;
+   return a;
+}
 
 int main()
 {
-   int test;
-   int a, b, c, d;
-   cin >> test;
-   while (test--)
-   {
-      cin >> a >> b >> c >> d;
-      int x = b - 1, y = b + 1, z = c + 1;
-      cout << x << " " << y << " " << z;
-   }
-   getch();
+   int x;
+   char ch;
+   cin >> ch;
+   x = ch;
+   cout << x;
+   cout << gcd(6, 3);
    return 0;
 }

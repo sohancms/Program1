@@ -17,7 +17,8 @@
 #include <iomanip>
 #include <algorithm>
 #include <climits>
-//====================================> define <====================================
+#include <stdio.h>
+//====================================> define <=====================================
 #define PI acos(-1.0)
 #define f first
 #define s second
@@ -46,32 +47,44 @@ typedef long long ll;
 typedef long double ld;
 typedef double db;
 typedef string str;
+//=====================================> const <=====================================
+const ll mod = 1000000007;
 
 void solve()
 {
-    ll n, count = 0;
-    cin >> n;
-    ll x = n;
-    for (int i = 1; i <= n; i = (i * 10) + 1)
+    int a = (97 - 1);
+    ll n, q, l, r, x = 0;
+    cin >> n >> q;
+    str ss;
+    cin >> ss;
+    vector<ll> v;
+    vector<ll> v2;
+    for (ll i = 1; i < n; i++)
     {
-        for (int j = 1; j <= 9; j++)
-        {
-            if ((i * j) <= n)
-            {
-                count++;
-            }
-        }
+        ll x = ss[i] - a;
+        v.pb(x);
     }
-    cout << count << endl;
+    for (int i = 0; i < n; i++)
+    {
+        ll y = v2[i] + v[i];
+        v2.pb(y);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << v1[i];
+    }
+
+    //for (int i = 0; i < q; i++)
+    //{
+    //    int l, r;
+    //    cin >> l >> r;
+    //    cout << v2[r] - v2[l - 1] << endl;
+    //}
 }
+
 int main()
 {
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    solve();
     return 0;
 }
 //**************************Alhamdulillah**************************//

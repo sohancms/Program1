@@ -17,7 +17,7 @@
 #include <iomanip>
 #include <algorithm>
 #include <climits>
-//====================================> define <====================================
+//====================================> define <=====================================
 #define PI acos(-1.0)
 #define f first
 #define s second
@@ -46,32 +46,38 @@ typedef long long ll;
 typedef long double ld;
 typedef double db;
 typedef string str;
+//=====================================> const <=====================================
+const ll mod = 1000000007;
 
 void solve()
 {
-    ll n, count = 0;
-    cin >> n;
-    ll x = n;
-    for (int i = 1; i <= n; i = (i * 10) + 1)
+    str ternary;
+    cin >> ternary;
+    ll size=sizeof(ternary)/sizeof(ternary[0]);
+    for (int i = 0; i < ternary.length(); i++)
     {
-        for (int j = 1; j <= 9; j++)
+        if (ternary[i] == '-')
         {
-            if ((i * j) <= n)
-            {
-                count++;
-            }
-        }
+	    i++;
+	    if(ternary[i]=='.')
+	    {
+           	 cout << '1';
+	    }
+	    else if(ternary[i]=='-')
+	    {
+		cout<<'2';
+	    }
+	}
+	else
+	{
+	    cout<<'0';
+	}  
     }
-    cout << count << endl;
 }
+
 int main()
 {
-    ll test;
-    cin >> test;
-    while (test--)
-    {
-        solve();
-    }
+    solve();
     return 0;
 }
 //**************************Alhamdulillah**************************//
