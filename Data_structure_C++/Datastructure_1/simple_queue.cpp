@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 #define SIZE 5
 using namespace std;
 
@@ -131,4 +132,5 @@ int main()
     q.display();
 
     return 0;
-}
+    getch();
+}    1	

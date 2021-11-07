@@ -17,7 +17,6 @@
 #include <iomanip>
 #include <algorithm>
 #include <climits>
-#include <stdio.h>
 //====================================> define <=====================================
 #define PI acos(-1.0)
 #define f first
@@ -52,34 +51,42 @@ const ll mod = 1000000007;
 
 void solve()
 {
-    int a = (97 - 1);
-    ll n, q, l, r, x = 0;
+    ll n, q, y = 0;
     cin >> n >> q;
-    str ss;
-    cin >> ss;
+    /* ll a[1000],s[1000];
+    for(int i=1;i<=n;i++)
+    {
+    	char c;
+    	cin>>c;
+    	a[i]=c-'a'+1;
+    	s[i]=s[i-1]+a[i];
+    }*/
     vector<ll> v;
-    vector<ll> v2;
-    for (ll i = 1; i < n; i++)
+    vector<ll> v2 = {0};
+    for (int i = 1; i <= n; i++)
     {
-        ll x = ss[i] - a;
+        char c;
+        cin >> c;
+        ll x = c - 'a' + 1;
         v.pb(x);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        ll y = v2[i] + v[i];
+        y += v[i - 1];
         v2.pb(y);
     }
-    for (int i = 0; i < n; i++)
+    /* for (int i = 0; i < n; i++)
     {
-        cout << v1[i];
+        cout << v[i] << endl;
     }
 
-    //for (int i = 0; i < q; i++)
-    //{
-    //    int l, r;
-    //    cin >> l >> r;
-    //    cout << v2[r] - v2[l - 1] << endl;
-    //}
+    for (int i = 0; i <= n; i++)
+    {
+        cout << v2[i];
+    }*/
+    while (q--)
+    {
+        ll l, r;
+        cin >> l >> r;
+        cout << (v2[r] - v2[l]) + v[l - 1] << endl;
+    }
 }
 
 int main()

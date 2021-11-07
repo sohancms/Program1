@@ -1,18 +1,16 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main()
 {
-    int i = 1;
-    int k = 1;
-    int n = 10;
-    while (k < n)
-    {
-        cout << "The fucker boy" << endl;
-        k = k + i;
-        i++;
-    }
-    int x;
-    cin >> x;
-    cout << x;
+    string s = ("sohancse");
+    int pos = s.find("a");
+    string sub1, sub2, sub3;
+    sub1 = s.substr(pos + 1);
+    sub2 = s.substr(0, pos);
+    sub3 = s.substr(1, pos);
+    cout << sub1 << "\n"
+         << sub2 << "\n"
+         << sub3 << "\n";
     return 0;
 }

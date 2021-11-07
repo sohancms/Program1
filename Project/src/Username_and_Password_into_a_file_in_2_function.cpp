@@ -32,7 +32,9 @@ int main()
             break;
         case 'v':
         case 'V':
+            cout << endl;
             cout << "Thank You for using our bank and Future Computer Programmer ATM Machine! \n For you continued support,We are offering 3% cash back on all debit purchases." << endl;
+            cout << endl;
         }
     }
     return 0;
