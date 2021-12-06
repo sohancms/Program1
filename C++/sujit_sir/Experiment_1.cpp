@@ -44,5 +44,9 @@ int main()
             break;
         }
     }
+    else
+    {
+        cout << "None Of this" << endl;
+    }
     return 0;
 }

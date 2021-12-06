@@ -20,9 +20,10 @@ int main()
             }
             else
             {
-                (s[i] == 'b') ? cout << 'z' : cout << 'y';
+                (s[i] == 'z') ? cout << 'y' : cout << 'z';
             }
         }
+        cout << endl;
     }
     return 0;
 }
